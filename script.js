@@ -3,8 +3,12 @@ document.getElementById("reload-btn").addEventListener("click", function () {
     document.body.style.background = "black";
     document.body.innerHTML = "";
 
-    // Воспроизведение звука
-    let audio = document.getElementById("prank-audio");
+    // Создание нового элемента audio
+    let audio = new Audio("whatsapp-bass-boosted.mp3");
     audio.volume = 1.0; // Максимальная громкость
-    audio.play();
+
+    // Попробовать запустить звук после взаимодействия
+    audio.play().catch(error => {
+        console.error("Ошибка воспроизведения звука:", error);
+    });
 });
