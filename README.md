@@ -1,1 +1,1 @@
-a
+Simple prank
